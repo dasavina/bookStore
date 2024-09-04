@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Reflection;
+﻿using System.Reflection;
 using System.Text;
 
 using System.Data;
 using Dapper;
 using System.ComponentModel;
-using Dapper_Example_Project.Repositories.Interfaces;
 using System.Data.SqlClient;
+using DapperPart.Repositories.Interfaces;
 
-namespace Dapper_Example_Project.Repositories
+namespace DapperPart.Repositories
 {
     public abstract class GenericRepository<T> : IGenericRepository<T> where T : class
     {
@@ -20,7 +18,9 @@ namespace Dapper_Example_Project.Repositories
 
         private readonly string _tableName;
 
-        protected GenericRepository(SqlConnection sqlConnection, IDbTransaction dbTransaction, string tableName)
+        protected GenericRepository(SqlConnection sqlConnection,
+            IDbTransaction dbTransaction,
+            string tableName)
         {
             _sqlConnection = sqlConnection;
             _dbTransaction = dbTransaction;
@@ -30,14 +30,14 @@ namespace Dapper_Example_Project.Repositories
 
         public async Task<IEnumerable<T>> GetAllAsync()
         {
-            return await _sqlConnection.QueryAsync<T>($"SELECT * FROM {_tableName}", 
+            return await _sqlConnection.QueryAsync<T>($"SELECT * FROM {_tableName}",
                 transaction: _dbTransaction);
         }
 
         public async Task<T> GetAsync(int id)
         {
-            var result = await _sqlConnection.QuerySingleOrDefaultAsync<T>($"SELECT * FROM {_tableName} WHERE Id=@Id", 
-                param: new { Id = id }, 
+            var result = await _sqlConnection.QuerySingleOrDefaultAsync<T>($"SELECT * FROM {_tableName} WHERE Id=@Id",
+                param: new { Id = id },
                 transaction: _dbTransaction);
             if (result == null)
                 throw new KeyNotFoundException($"{_tableName} with id [{id}] could not be found.");
@@ -46,11 +46,10 @@ namespace Dapper_Example_Project.Repositories
 
         public async Task DeleteAsync(int id)
         {
-            await _sqlConnection.ExecuteAsync($"DELETE FROM {_tableName} WHERE Id=@Id", 
-                param: new { Id = id }, 
+            await _sqlConnection.ExecuteAsync($"DELETE FROM {_tableName} WHERE Id=@Id",
+                param: new { Id = id },
                 transaction: _dbTransaction);
         }
-
 
         public async Task<int> AddAsync(T t)
         {
@@ -65,7 +64,7 @@ namespace Dapper_Example_Project.Repositories
         {
             var inserted = 0;
             var query = GenerateInsertQuery();
-            inserted += await _sqlConnection.ExecuteAsync(query, 
+            inserted += await _sqlConnection.ExecuteAsync(query,
                 param: list);
             return inserted;
         }
@@ -74,11 +73,11 @@ namespace Dapper_Example_Project.Repositories
         public async Task ReplaceAsync(T t)
         {
             var updateQuery = GenerateUpdateQuery();
-            await _sqlConnection.ExecuteAsync(updateQuery, 
-                param: t, 
+            await _sqlConnection.ExecuteAsync(updateQuery,
+                param: t,
                 transaction: _dbTransaction);
         }
-        
+
         // работа со свойствами модели
         private IEnumerable<PropertyInfo> GetProperties => typeof(T).GetProperties();
         private static List<string> GenerateListOfProperties(IEnumerable<PropertyInfo> listOfProperties)

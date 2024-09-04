@@ -5,7 +5,7 @@ VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bookStore", "bookStore\bookStore.csproj", "{4B056BE6-908C-45D8-BC95-BB43AC67AFC8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dapper", "Dapper\Dapper.csproj", "{73A2E6BE-97AD-4146-A89F-2329F7970165}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DapperPart", "Dapper\DapperPart.csproj", "{73A2E6BE-97AD-4146-A89F-2329F7970165}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,4 +1,4 @@
-﻿namespace Dapper_Example_Project.Repositories.Interfaces
+﻿namespace DapperPart.Repositories.Interfaces
 {
     public interface IGenericRepository<T>
     {

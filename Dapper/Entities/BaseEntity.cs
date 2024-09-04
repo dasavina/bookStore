@@ -1,4 +1,4 @@
-﻿namespace Dapper_Example_Project.Entities
+﻿namespace DapperPart.Entities
 {
     public class BaseEntity
     {
