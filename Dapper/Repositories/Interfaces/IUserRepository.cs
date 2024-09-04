@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DapperPart.Repositories.Interfaces
 {
-    internal interface IUserRepository: IGenericRepository<User>
+    public interface IUserRepository: IGenericRepository<User>
     {
 
     }

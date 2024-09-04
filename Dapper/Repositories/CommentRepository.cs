@@ -8,15 +8,11 @@ namespace DapperPart.Repositories
 {
     public class CommentRepository : GenericRepository<Comment>, ICommentRepository
     {
-        public CommentRepository(SqlConnection sqlConnection, IDbTransaction dbtransaction) : base(sqlConnection, dbtransaction, "Category")
+        public CommentRepository(SqlConnection sqlConnection, IDbTransaction dbtransaction) : base(sqlConnection, dbtransaction, "Comment")
         {
         }
 
-        public Task<IEnumerable<Comment>> GetCommentsForBook(int bookID)
-        {
-            throw new NotImplementedException();
-        }
-        public async Task<IEnumerable<Comment>> GetCommentsByBookIdAsync(int bookID)
+        public async Task<IEnumerable<Comment>> GetCommentsForBook(int bookID)
         {
             string sql = @"SELECT * 
                    FROM Comment 

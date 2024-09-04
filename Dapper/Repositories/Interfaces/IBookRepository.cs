@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DapperPart.Repositories.Interfaces
 {
-    internal interface IBookRepository : IGenericRepository<Book>
+    public interface IBookRepository : IGenericRepository<Book>
     {
 
     }
