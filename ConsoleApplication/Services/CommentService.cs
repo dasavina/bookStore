@@ -25,7 +25,7 @@ namespace ConsoleApplication.Services
             Console.ForegroundColor = ConsoleColor.Magenta;
             Console.WriteLine("-->> Зведена інформація про коментар");
             Console.WriteLine("-->> Ідентифікатор коментаря - \t" + comment.Id);
-            Console.WriteLine("-->> Тіло коментаря - \t" + comment.Body);
+            Console.WriteLine("-->> Тіло коментаря - \t" + comment.CommentBody);
 
             // Fetch user information using UserID
             var user = await _unitOfWork._userRepository.GetAsync(comment.UserID);

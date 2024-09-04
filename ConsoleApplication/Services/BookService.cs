@@ -33,8 +33,7 @@ namespace ConsoleApplication.Services
             Console.WriteLine("-->> Жанр книги - \t" + book.Genre);
 
             // Fetch the author of the book using AuthorID
-            var author = await _unitOfWork._authorRepository.GetAsync(book.AuthorID);
-            Console.WriteLine("-->> Автор книги - \t" + author.Name);
+            //todo
 
             Console.WriteLine("" + Environment.NewLine);
             Console.ResetColor();
