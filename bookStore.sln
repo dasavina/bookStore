@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DapperPart", "Dapper\DapperPart.csproj", "{73A2E6BE-97AD-4146-A89F-2329F7970165}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DapperPart", "Dapper\DapperPart.csproj", "{73A2E6BE-97AD-4146-A89F-2329F7970165}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication", "ConsoleApplication\ConsoleApplication.csproj", "{4DC0F4E7-2199-4B1A-BC0D-CC8EDA3994D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApplication", "ConsoleApplication\ConsoleApplication.csproj", "{4DC0F4E7-2199-4B1A-BC0D-CC8EDA3994D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication", "WebApplication\WebApplication.csproj", "{1FC5BEB9-5B71-4873-BA48-29A36CABD796}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{4DC0F4E7-2199-4B1A-BC0D-CC8EDA3994D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4DC0F4E7-2199-4B1A-BC0D-CC8EDA3994D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4DC0F4E7-2199-4B1A-BC0D-CC8EDA3994D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FC5BEB9-5B71-4873-BA48-29A36CABD796}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FC5BEB9-5B71-4873-BA48-29A36CABD796}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FC5BEB9-5B71-4873-BA48-29A36CABD796}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FC5BEB9-5B71-4873-BA48-29A36CABD796}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
