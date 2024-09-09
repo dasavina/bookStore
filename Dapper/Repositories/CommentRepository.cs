@@ -8,7 +8,7 @@ namespace DapperPart.Repositories
 {
     public class CommentRepository : GenericRepository<Comment>, ICommentRepository
     {
-        public CommentRepository(SqlConnection sqlConnection, IDbTransaction dbtransaction) : base(sqlConnection, dbtransaction, "Comment")
+        public CommentRepository(SqlConnection sqlConnection, IDbTransaction dbtransaction) : base(sqlConnection, dbtransaction, "comment")
         {
         }
 

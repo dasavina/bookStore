@@ -22,7 +22,6 @@ namespace ConsoleApplication.Services
             var book = await _unitOfWork._bookRepository.GetAsync(id);
 
             // Display the book details in the console with formatting
-            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("-->> Зведена інформація про книгу");
             Console.WriteLine("-->> Назва книги - \t" + book.Name);
             Console.WriteLine("-->> Опис книги - \t" + book.Description);
@@ -36,7 +35,6 @@ namespace ConsoleApplication.Services
             //todo
 
             Console.WriteLine("" + Environment.NewLine);
-            Console.ResetColor();
         }
     }
 

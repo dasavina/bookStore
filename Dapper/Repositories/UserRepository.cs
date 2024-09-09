@@ -12,7 +12,7 @@ namespace DapperPart.Repositories
 {
     public class UserRepository : GenericRepository<User>, IUserRepository
     {
-        public UserRepository(SqlConnection sqlConnection, IDbTransaction dbtransaction) : base(sqlConnection, dbtransaction, "User")
+        public UserRepository(SqlConnection sqlConnection, IDbTransaction dbtransaction) : base(sqlConnection, dbtransaction, "user")
         {
         }
     }

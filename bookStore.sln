@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DapperPart", "Dapper\Dapper
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApplication", "ConsoleApplication\ConsoleApplication.csproj", "{4DC0F4E7-2199-4B1A-BC0D-CC8EDA3994D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication", "WebApplication\WebApplication.csproj", "{1FC5BEB9-5B71-4873-BA48-29A36CABD796}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp", "WebApplication\WebApp.csproj", "{1FC5BEB9-5B71-4873-BA48-29A36CABD796}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

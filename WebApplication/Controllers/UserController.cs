@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WebApplication.Controllers
+namespace WebApp.Controllers
 {
     [ApiController]
     [Route("/api/[controller]")]

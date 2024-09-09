@@ -12,7 +12,7 @@ namespace DapperPart.Repositories
 {
     public class BookRepository : GenericRepository<Book>, IBookRepository
     {
-        public BookRepository(SqlConnection sqlConnection, IDbTransaction dbtransaction) : base(sqlConnection, dbtransaction, "Book")
+        public BookRepository(SqlConnection sqlConnection, IDbTransaction dbtransaction) : base(sqlConnection, dbtransaction, "book")
         {
         }
     }
